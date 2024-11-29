@@ -59,12 +59,6 @@
 		<assets path="assets/secrets" rename="assets" exclude="*.ogg" if="web"/>
 		<assets path="assets/secrets" rename="assets" exclude="*.mp3"  unless="web"/>
 	</section>
-	<section if="WEIRD_THEME_USE">
-		<assets path="assets/themes/preload" 	rename="assets" 	exclude="*.ogg" if="web"/>
-		<assets path="assets/themes/preload" 	rename="assets"		exclude="*.mp3"  unless="web"/>
-		<assets path="assets/themes/shared"    rename="assets/shared"		library="shared"    exclude="*.ogg" if="web"/>
-		<assets path="assets/themes/shared"    rename="assets/shared"		library="shared"    exclude="*.mp3" unless="web"/>
-	</section>
 
 	<!-- DONT ENABLE THIS -->
 	<define name="CHECK_FOR_UPDATES" if="officialBuild" unless="web"/>
