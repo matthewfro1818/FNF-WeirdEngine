@@ -23,6 +23,7 @@ class ClientPrefs
 	public static var unfocuPause:Bool = true;
 	public static var noteSplashes:Bool = true;
 	public static var lowQuality:Bool = false;
+    public static var shaders:Bool = true;
 	public static var framerate:Dynamic = #if desktop 'V-Sync' #else 60 #end;
 	//public static var framerate:Dynamic = 60;
 	public static var cursing:Bool = true;
@@ -31,7 +32,7 @@ class ClientPrefs
 	public static var hideHud:Bool = false;
 	public static var noteOffset:Int = 0;
 	//public static var arrowHSV:Array<Array<Int>> = [
-	//	[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
+	//	[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 	public static var arrowHSV:Map<String, Array<Int>> = [
 		'A' => [0, 0, 0],
 		'B' => [0, 0, 0],
@@ -50,7 +51,8 @@ class ClientPrefs
 		'O' => [0, 0, 0],
 		'P' => [0, 0, 0],
 		'Q' => [0, 0, 0],
-		'R' => [0, 0, 0]
+		'R' => [0, 0, 0],
+		'S' => [0, 0, 0]
 	];
 	public static var imagesPersist:Bool = false;
 	public static var ghostTapping:Bool = true;
@@ -169,6 +171,18 @@ class ClientPrefs
 		'note_elev9' => [K, NONE],
 		'note_elev10' => [L, NONE],
 		'note_elev11' => [PERIOD, NONE],
+		'note_twelv1' => [A, NONE],
+		'note_twelv2' => [S, NONE],
+		'note_twelv3' => [D, NONE],
+		'note_twelv4' => [F, NONE],
+		'note_twelv5' => [G, NONE],
+		'note_twelv6' => [SPACE, NONE],
+		'note_twelv7' => [H, NONE],
+		'note_twelv8' => [J, NONE],
+		'note_twelv9' => [K, NONE],
+		'note_twelv10' => [L, NONE],
+		'note_twelv11' => [PERIOD, NONE],
+		'note_twelv12' => [COMMA, NONE],
 		'ui_left' => [A, LEFT],
 		'ui_down' => [S, DOWN],
 		'ui_up' => [W, UP],
@@ -204,6 +218,7 @@ class ClientPrefs
 		FlxG.save.data.unfocuPause = unfocuPause;
 		FlxG.save.data.noteSplashes = noteSplashes;
 		FlxG.save.data.lowQuality = lowQuality;
+		FlxG.save.data.shaders = shaders;
 		FlxG.save.data.framerate = framerate;
 		// FlxG.save.data.cursing = cursing;
 		// FlxG.save.data.violence = violence;
@@ -294,6 +309,10 @@ class ClientPrefs
 		if (FlxG.save.data.lowQuality != null)
 		{
 			lowQuality = FlxG.save.data.lowQuality;
+		}
+		if (FlxG.save.data.shaders != null)
+		{
+			shaders = FlxG.save.data.shaders;
 		}
 		if (FlxG.save.data.framerate != null)
 		{
